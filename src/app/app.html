@@ -6,7 +6,7 @@
     <div class="mb-3">
       <h2> Mensagens </h2>
 
-      <ul class="list-group" style="max-height: 800px; overflow-y: auto; border: 1px solid red">
+      <ul class="list-group" style="max-height: 800px; overflow-y: auto;">
         @for (msg of mensagens; track msg.id) {
           <li class="list-group-item">
             <p class="fw-bold"> {{ msg.clienteId }} - {{ msg.Cliente.nome }} </p>
