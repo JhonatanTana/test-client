@@ -25,7 +25,7 @@ export class App implements OnInit {
 
   getMensagens(): void {
     this.http.get<Mensagens[]>(
-      '/api/mensagens'
+      'http://ec2-54-233-219-14.sa-east-1.compute.amazonaws.com:3000/mensagens'
     ).subscribe({
       next: (response) => {
         this.mensagens = response;
