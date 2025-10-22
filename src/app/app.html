@@ -9,8 +9,8 @@
       <ul class="list-group" style="max-height: 800px; overflow-y: auto;">
         @for (msg of mensagens; track msg.id) {
           <li class="list-group-item">
-            <p class="fw-bold"> {{ msg.clienteId }} - {{ msg.Cliente.nome }} </p>
-            <span class="ms-4"> {{ msg.mensagem }} </span>
+            <p class="fw-bold"> {{ msg.clienteId }} </p>
+            <span class="ms-4"> {{ msg.texto }} </span>
           </li>
         }
       </ul>

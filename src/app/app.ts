@@ -1,8 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { Mensagens } from './mensagens';
-import { BrowserModule } from '@angular/platform-browser';
+
+interface Mensagens {
+  "id": number,
+  "texto": string,
+  "clienteId": number,
+}
+
+interface Cliente {
+  id: number,
+  nome: string,
+  cnpj: string,
+}
 
 @Component({
   selector: 'app-root',
@@ -25,7 +35,7 @@ export class App implements OnInit {
 
   getMensagens(): void {
     this.http.get<Mensagens[]>(
-      'http://ec2-54-233-219-14.sa-east-1.compute.amazonaws.com:3000/mensagens'
+      'http://ec2-54-233-219-14.sa-east-1.compute.amazonaws.com:3000/api/Mensagens'
     ).subscribe({
       next: (response) => {
         this.mensagens = response;

@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://ec2-54-233-219-14.sa-east-1.compute.amazonaws.com:3000",
+    "target": "https://jhonatantana.com.br/api/",
     "secure": false,
     "changeOrigin": true,
     "pathRewrite": { "^/api": "" }
